@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{74E85750-0804-4D06-A626-B318133F9F38}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>B21_Ex03_Matan_316120245_Tal_205643984</RootNamespace>
-    <AssemblyName>B21 Ex03 Matan 316120245 Tal 205643984</AssemblyName>
+    <RootNamespace>Ex03.ConsoleUI</RootNamespace>
+    <AssemblyName>Ex03.ConsoleUI</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
