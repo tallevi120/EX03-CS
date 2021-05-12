@@ -1,4 +1,4 @@
-﻿namespace B21_Ex02_Matan_316120245_Tal_205643984
+﻿namespace Ex03.ConsoleUI
 {
     using System;
 
