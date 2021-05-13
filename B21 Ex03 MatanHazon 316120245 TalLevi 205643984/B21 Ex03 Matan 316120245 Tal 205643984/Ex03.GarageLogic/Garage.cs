@@ -1,12 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Ex03.GarageLogic
+﻿namespace Ex03.GarageLogic
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
     public class Garage
     {
         private List<VehicleInTheGarage> m_ListOfVehicles;
+
+        public List<VehicleInTheGarage> ListOfVehicles
+        {
+            get
+            {
+                return m_ListOfVehicles;
+            }
+
+            set
+            {
+                m_ListOfVehicles = value;
+            }
+        }
+
+
         public void InsertVehicleIntoGarage(VehicleInTheGarage i_VehicleToAdd)
         {
 
@@ -45,6 +60,21 @@ namespace Ex03.GarageLogic
         public void DetailsAboutVehicle(string i_LicenseNumber)
         {
 
+        }
+
+        public bool IfVehicleExists(string i_LicensePlate)
+        {
+            bool isExists = false;
+            foreach(VehicleInTheGarage vehicle in m_ListOfVehicles)
+            {
+                if (vehicle.Vehicle.LicenseNumber == i_LicensePlate)
+                {
+                    isExists = true;
+                    break;
+                }
+            }
+
+            return isExists;
         }
 
     }

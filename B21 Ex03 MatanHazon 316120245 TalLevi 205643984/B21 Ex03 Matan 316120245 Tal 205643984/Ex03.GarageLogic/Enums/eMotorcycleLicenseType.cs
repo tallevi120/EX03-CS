@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Ex03.GarageLogic
 {
-    public enum eLicenseType
+    public enum eMotorcycleLicenseType
     {
         A, 
         B1, 
