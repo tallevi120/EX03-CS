@@ -9,7 +9,7 @@ namespace Ex03.GarageLogic
         private Vehicle m_Vehicle;
         private string m_OwnerName;
         private string m_OwnerPhone;
-        private eVehicleStatus m_VehicleStatus;
+        private eVehicleStatus m_VehicleStatus = (eVehicleStatus)1;
 
         public Vehicle Vehicle
         {

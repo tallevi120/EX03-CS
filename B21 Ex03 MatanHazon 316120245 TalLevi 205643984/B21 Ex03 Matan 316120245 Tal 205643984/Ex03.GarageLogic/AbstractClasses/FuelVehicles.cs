@@ -51,7 +51,13 @@ namespace Ex03.GarageLogic
 
         public void Refueling(float i_HowMuchFuelToAdd, eFuelType i_TypeOfFuel)
         {
+            if(m_MaximumAmountOfFuel <= i_HowMuchFuelToAdd + m_CurrentAmountOfFuel)
+            {
+                return;
+            }
 
+            m_CurrentAmountOfFuel += i_HowMuchFuelToAdd;
         }
+
     }
 }

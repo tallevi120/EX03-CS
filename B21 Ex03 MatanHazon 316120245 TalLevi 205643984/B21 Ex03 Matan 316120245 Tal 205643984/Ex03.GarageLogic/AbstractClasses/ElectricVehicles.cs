@@ -32,7 +32,12 @@
         }
         public void BatteryCharging(float i_AmountOfChargingHours)
         {
+            if (m_MaximumBatteryTime <= i_AmountOfChargingHours + m_RemainingBatteryTime)
+            {
+                return;
+            }
 
+            m_RemainingBatteryTime += i_AmountOfChargingHours;
         }
     }
 }

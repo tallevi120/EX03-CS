@@ -33,5 +33,26 @@ namespace Ex03.GarageLogic
             TypeOfFuel = i_CarFuelType;
             PercentageOfEnergyRemaining = i_PercentageOfEnergyRemaining;
         }
+
+        public override string ToString()
+        {
+            return string.Format(@"License Number: {0}
+Model Name: {1}
+Owner Name: {2}
+Owner Phone: {3}
+Vehicle Status: {4}
+Type Of Fuel: {5}
+Maximum Amount Of Fuel: {6}
+Current Amount Of Fuel: {7}
+Percentage Of Energy Remaining: {8}%
+Wheel Manufacturer Name: {9}
+Whell Maximum Air Pressure: {10}
+Wheel Current Air Pressure: {11}
+Car Color: {12}
+Number Of Doors: {13}", this.LicenseNumber, this.ModelName, this.OwnerName, this.OwnerPhone, this.VehicleStatus, this.TypeOfFuel, 
+                this.MaximumAmountOfFuel, this.CurrentAmountOfFuel, this.PercentageOfEnergyRemaining,
+                this.VehicleWheels[0].ManufacturerName, this.VehicleWheels[0].MaximumAirPressure,
+                this.VehicleWheels[0].CurrentAirPressure, m_CarDetails.Color, m_CarDetails.NumberOfDoors);
+        }
     }
 }

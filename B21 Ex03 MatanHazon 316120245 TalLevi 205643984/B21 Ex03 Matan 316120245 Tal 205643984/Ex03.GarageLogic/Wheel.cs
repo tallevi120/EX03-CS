@@ -51,7 +51,11 @@
 
         public void InflatingWheels(float i_HowMuchAirToAdd)
         {
-
+            if (m_MaximumAirPressure <= i_HowMuchAirToAdd + m_CurrentAirPressure)
+            {
+                return;
+            }
+            CurrentAirPressure += i_HowMuchAirToAdd;
         }
 
         public Wheel(string i_ManufacturerName, float i_MaxManufacturerAirPressure, float i_CurrentAirPressure)
