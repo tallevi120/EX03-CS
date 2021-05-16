@@ -26,7 +26,7 @@
         {
             List<Wheel> wheels = createWheels(k_CarWheelsAmount, k_CarMaxManufacturerAirPressure, i_ManufacturerWheelName,
                 i_CurrentWheelAirPressure);
-            float PercentageOfEnergyRemaining = (k_CarMaxFuel / 100) * i_CurrentFuelAmount;
+            float PercentageOfEnergyRemaining = (100 / k_CarMaxFuel) * i_CurrentFuelAmount;
             return new FuelCar(i_ModelName, i_LicenceNumber, i_CurrentFuelAmount, wheels, i_CarColor, i_Doors,
                 k_CarMaxFuel, k_CarFuelType, PercentageOfEnergyRemaining);
         }
@@ -36,7 +36,7 @@
         {
             List<Wheel> Wheels = createWheels(k_CarWheelsAmount, k_CarMaxManufacturerAirPressure, i_ManufacturerWheelName,
                 i_CurrentWheelAirPressure);
-            float PercentageOfEnergyRemaining = (k_CarMaxElectricPower / 100) * i_WorkHoursRemining;
+            float PercentageOfEnergyRemaining = (100 / k_CarMaxElectricPower) * i_WorkHoursRemining;
             return new ElectricCar(i_ModelName, i_LicenceNumber, Wheels, i_CarColor, i_Doors, i_WorkHoursRemining,
                 k_CarMaxElectricPower, PercentageOfEnergyRemaining);
         }
@@ -46,7 +46,7 @@
         {
             List<Wheel> Wheels = createWheels(k_MotorcycleTiresAmount, k_MotorcycleMaxManufacturerAirPressure, i_ManufacturerWheelName,
                 i_CurrentWheelAirPressure);
-            float PercentageOfEnergyRemaining = (k_MotorcycleMaxFuel / 100) * i_CurrentFuelAmount;
+            float PercentageOfEnergyRemaining = (100 / k_MotorcycleMaxFuel) * i_CurrentFuelAmount;
 
             return new FuelMotorcycle(i_ModelName, i_LicenceNumber, Wheels, i_LicenseType, i_EngineCc, i_CurrentFuelAmount,
                 k_MotorcycleMaxFuel, k_MotorcycleFuelType, PercentageOfEnergyRemaining);
@@ -57,7 +57,7 @@
         {
             List<Wheel> Wheels = createWheels(k_MotorcycleTiresAmount, k_MotorcycleMaxManufacturerAirPressure, i_ManufacturerWheelName,
                 i_CurrentWheelAirPressure);
-            float PercentageOfEnergyRemaining = (k_MotorcycleMaxElectricPower / 100) * i_WorkHoursRemining;
+            float PercentageOfEnergyRemaining = (100 / k_MotorcycleMaxElectricPower) * i_WorkHoursRemining;
 
             return new ElectricMotorcycle(i_ModelName, i_LicenceNumber, Wheels, i_LicenseType, i_EngineCc, i_WorkHoursRemining,
                 k_MotorcycleMaxElectricPower, PercentageOfEnergyRemaining);
@@ -68,7 +68,7 @@
         {
             List<Wheel> wheels = createWheels(k_TruckWheelsAmount, k_TruckMaxManufacturerAirPressure, i_ManufacturerWheelName ,
                 i_CurrentWheelAirPressure);
-            float PercentageOfEnergyRemaining = (k_TruckMaxFuel / 100) * i_CurrentFuelAmount;
+            float PercentageOfEnergyRemaining = (100 / k_TruckMaxFuel) * i_CurrentFuelAmount;
             return new FuelTruck(i_ModelName, i_LicenceNumber, wheels, i_MaxCargoWeightAllowed, i_CurrentFuelAmount, k_TruckMaxFuel,
                 i_IsCarryngDangerousMaterials, k_TruckFuelType, PercentageOfEnergyRemaining);
         }

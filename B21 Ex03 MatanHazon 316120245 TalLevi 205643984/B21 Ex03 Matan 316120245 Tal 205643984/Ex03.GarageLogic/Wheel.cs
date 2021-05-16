@@ -1,8 +1,6 @@
 ﻿namespace Ex03.GarageLogic
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
 
     public class Wheel
     {
@@ -51,9 +49,13 @@
 
         public void InflatingWheels(float i_HowMuchAirToAdd)
         {
-            if (m_MaximumAirPressure <= i_HowMuchAirToAdd + m_CurrentAirPressure)
+            if(i_HowMuchAirToAdd < 0)
             {
-                return;
+                throw new FormatException("Input must be a positive integer");
+            }
+            if (m_MaximumAirPressure < i_HowMuchAirToAdd + m_CurrentAirPressure)
+            {
+                throw new ValueOutOfRangeException("Too much air in the wheel", 0, m_MaximumAirPressure);
             }
             CurrentAirPressure += i_HowMuchAirToAdd;
         }

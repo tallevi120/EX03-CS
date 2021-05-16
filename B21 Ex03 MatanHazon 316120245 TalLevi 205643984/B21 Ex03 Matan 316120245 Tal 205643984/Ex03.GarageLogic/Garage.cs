@@ -2,7 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Text;
 
     public class Garage
     {
@@ -93,6 +92,14 @@
                 {
                     if (vehicle.Vehicle is FuelVehicles)
                     {
+                        try
+                        {
+
+                        }
+                        catch(FormatException ex)
+                        {
+
+                        }
                         (vehicle.Vehicle as FuelVehicles).Refueling(i_HowMuchFuelToAdd, i_TypeOfFuel);
                         break;
                     }
@@ -142,7 +149,9 @@
             {
                 if (vehicle.Vehicle.LicenseNumber == i_LicenseNumber)
                 {
-                    vehicleReport = vehicle.ToString();
+                    Console.WriteLine(string.Format(@"Owner Name: {0}
+Owner Phone: {1}", vehicle.OwnerName, vehicle.OwnerPhone));
+                    vehicleReport = vehicle.Vehicle.ToString();
                 }
             }
             
@@ -171,7 +180,7 @@
             
             foreach (var vehicle in m_ListOfVehicles)
             {
-                if ((vehicle.VehicleStatus & i_VehicleStatus) == vehicle.VehicleStatus)
+                if (i_VehicleStatus == vehicle.VehicleStatus)
                 {
                     licenseNumber.Add(vehicle.Vehicle.LicenseNumber);
                 }

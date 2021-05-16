@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Ex03.GarageLogic
+﻿namespace Ex03.GarageLogic
 {
+    using System.Collections.Generic;
+
     public class ElectricCar : ElectricVehicles
     {
         private Car m_CarDetails;
@@ -35,17 +33,15 @@ namespace Ex03.GarageLogic
         {
             return string.Format(@"License Number: {0}
 Model Name: {1}
-Owner Name: {2}
-Owner Phone: {3}
-Vehicle Status: {4}
-Maximum Battery Time: {5}
-Remaining Battery Time: {6}
-Percentage Of Energy Remaining: {7}%
-Wheel Manufacturer Name: {8}
-Whell Maximum Air Pressure: {9}
-Wheel Current Air Pressure: {10}
-Car Color: {11}
-Number Of Doors: {12}", this.LicenseNumber, this.ModelName, this.OwnerName, this.OwnerPhone, this.VehicleStatus,
+Vehicle Status: {2}
+Maximum Battery Time: {3}
+Remaining Battery Time: {4}
+Percentage Of Energy Remaining: {5}%
+Wheel Manufacturer Name: {6}
+Whell Maximum Air Pressure: {7}
+Wheel Current Air Pressure: {8}
+Car Color: {9}
+Number Of Doors: {10}", this.LicenseNumber, this.ModelName, this.VehicleStatus,
                 this.MaximumBatteryTime, this.RemainingBatteryTime, this.PercentageOfEnergyRemaining,
                 this.VehicleWheels[0].ManufacturerName, this.VehicleWheels[0].MaximumAirPressure,
                 this.VehicleWheels[0].CurrentAirPressure, m_CarDetails.Color, m_CarDetails.NumberOfDoors);

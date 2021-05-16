@@ -32,12 +32,13 @@
         }
         public void BatteryCharging(float i_AmountOfChargingHours)
         {
-            if (m_MaximumBatteryTime <= i_AmountOfChargingHours + m_RemainingBatteryTime)
+            if (m_MaximumBatteryTime < i_AmountOfChargingHours + m_RemainingBatteryTime)
             {
-                return;
+                throw new ValueOutOfRangeException("Too much hours in the electric vehicle", 0, m_MaximumBatteryTime);
             }
 
             m_RemainingBatteryTime += i_AmountOfChargingHours;
+            this.PercentageOfEnergyRemaining = (100 / m_MaximumBatteryTime) * m_RemainingBatteryTime;
         }
     }
 }

@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Ex03.GarageLogic
+﻿namespace Ex03.GarageLogic
 {
+    using System;
+
     public abstract class FuelVehicles : Vehicle
     {
         private eFuelType m_TypeOfFuel;
@@ -51,12 +49,17 @@ namespace Ex03.GarageLogic
 
         public void Refueling(float i_HowMuchFuelToAdd, eFuelType i_TypeOfFuel)
         {
-            if(m_MaximumAmountOfFuel <= i_HowMuchFuelToAdd + m_CurrentAmountOfFuel)
+            if (i_TypeOfFuel != this.m_TypeOfFuel)
             {
-                return;
+                throw new ArgumentException("The type of fuel not valid");
+            }
+            if (m_MaximumAmountOfFuel < i_HowMuchFuelToAdd + m_CurrentAmountOfFuel)
+            {
+                throw new ValueOutOfRangeException("Too much fuel in the vehicle", 0, m_MaximumAmountOfFuel);
             }
 
             m_CurrentAmountOfFuel += i_HowMuchFuelToAdd;
+            this.PercentageOfEnergyRemaining = (100 / m_MaximumAmountOfFuel) * m_CurrentAmountOfFuel;
         }
 
     }
