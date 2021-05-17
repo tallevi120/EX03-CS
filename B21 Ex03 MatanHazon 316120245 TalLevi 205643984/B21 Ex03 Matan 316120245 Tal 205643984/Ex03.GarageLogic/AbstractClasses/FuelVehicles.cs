@@ -49,11 +49,12 @@
 
         public void Refueling(float i_HowMuchFuelToAdd, eFuelType i_TypeOfFuel)
         {
-            if (i_TypeOfFuel != this.m_TypeOfFuel)
+            if(i_TypeOfFuel != this.m_TypeOfFuel)
             {
                 throw new ArgumentException("The type of fuel not valid");
             }
-            if (m_MaximumAmountOfFuel < i_HowMuchFuelToAdd + m_CurrentAmountOfFuel)
+
+            if(m_MaximumAmountOfFuel < i_HowMuchFuelToAdd + m_CurrentAmountOfFuel)
             {
                 throw new ValueOutOfRangeException("Too much fuel in the vehicle", 0, m_MaximumAmountOfFuel);
             }
@@ -61,6 +62,5 @@
             m_CurrentAmountOfFuel += i_HowMuchFuelToAdd;
             this.PercentageOfEnergyRemaining = (100 / m_MaximumAmountOfFuel) * m_CurrentAmountOfFuel;
         }
-
     }
 }

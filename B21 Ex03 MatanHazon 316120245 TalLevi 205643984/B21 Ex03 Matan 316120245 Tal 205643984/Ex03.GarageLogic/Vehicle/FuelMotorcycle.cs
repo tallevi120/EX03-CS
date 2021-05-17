@@ -12,6 +12,7 @@
             {
                 return m_MotorcycleDetails;
             }
+
             set
             {
                 m_MotorcycleDetails = value;
@@ -36,19 +37,17 @@
         {
             return string.Format(@"License Number: {0}
 Model Name: {1}
-Vehicle Status: {2}
-Type Of Fuel: {3}
-Maximum Amount Of Fuel: {4}
-Current Amount Of Fuel: {5}
-Percentage Of Energy Remaining: {6}%
-Wheel Manufacturer Name: {7}
-Whell Maximum Air Pressure: {8}
-Wheel Current Air Pressure: {9}
-Engine Capacity: {10}
-License Type: {11}", this.LicenseNumber, this.ModelName, this.VehicleStatus, this.TypeOfFuel,
-                this.MaximumAmountOfFuel, this.CurrentAmountOfFuel, this.PercentageOfEnergyRemaining,
-                this.VehicleWheels[0].ManufacturerName, this.VehicleWheels[0].MaximumAirPressure,
-                this.VehicleWheels[0].CurrentAirPressure, m_MotorcycleDetails.EngineCapacity, m_MotorcycleDetails.LicenseType);
+Type Of Fuel: {2}
+Maximum Amount Of Fuel: {3}
+Current Amount Of Fuel: {4}
+Percentage Of Energy Remaining: {5}%
+Wheel Manufacturer Name: {6}
+Whell Maximum Air Pressure: {7}
+Wheel Current Air Pressure: {8}
+Engine Capacity: {9}
+License Type: {10}", this.LicenseNumber, this.ModelName, this.TypeOfFuel, this.MaximumAmountOfFuel, this.CurrentAmountOfFuel, 
+this.PercentageOfEnergyRemaining, this.VehicleWheels[0].ManufacturerName, this.VehicleWheels[0].MaximumAirPressure, 
+this.VehicleWheels[0].CurrentAirPressure, m_MotorcycleDetails.EngineCapacity, m_MotorcycleDetails.LicenseType);
         }
     }
 }

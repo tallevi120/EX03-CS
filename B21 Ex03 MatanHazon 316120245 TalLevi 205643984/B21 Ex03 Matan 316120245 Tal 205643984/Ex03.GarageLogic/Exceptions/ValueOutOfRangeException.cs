@@ -13,6 +13,7 @@
             {
                 return m_MaxValue;
             }
+
             set
             {
                 m_MaxValue = value;
@@ -25,6 +26,7 @@
             {
                 return m_MinValue;
             }
+
             set
             {
                 m_MinValue = value;

@@ -12,11 +12,13 @@
             {
                 return m_CarDetails;
             }
+
             set
             {
                 m_CarDetails = value;
             }
         }
+
         public ElectricCar(string i_ModelName, string i_LicenceNumber, List<Wheel> i_Wheels, eColorsForCar i_CarColor, eNumOfDoors i_Doors,
             float i_WorkHoursRemining, float i_CarMaxElectricPower, float i_PercentageOfEnergyRemaining)
         {
@@ -33,18 +35,16 @@
         {
             return string.Format(@"License Number: {0}
 Model Name: {1}
-Vehicle Status: {2}
-Maximum Battery Time: {3}
-Remaining Battery Time: {4}
-Percentage Of Energy Remaining: {5}%
-Wheel Manufacturer Name: {6}
-Whell Maximum Air Pressure: {7}
-Wheel Current Air Pressure: {8}
-Car Color: {9}
-Number Of Doors: {10}", this.LicenseNumber, this.ModelName, this.VehicleStatus,
-                this.MaximumBatteryTime, this.RemainingBatteryTime, this.PercentageOfEnergyRemaining,
-                this.VehicleWheels[0].ManufacturerName, this.VehicleWheels[0].MaximumAirPressure,
-                this.VehicleWheels[0].CurrentAirPressure, m_CarDetails.Color, m_CarDetails.NumberOfDoors);
+Maximum Battery Time: {2}
+Remaining Battery Time: {3}
+Percentage Of Energy Remaining: {4}%
+Wheel Manufacturer Name: {5}
+Whell Maximum Air Pressure: {6}
+Wheel Current Air Pressure: {7}
+Car Color: {8}
+Number Of Doors: {9}", this.LicenseNumber, this.ModelName, this.MaximumBatteryTime, this.RemainingBatteryTime, 
+this.PercentageOfEnergyRemaining, this.VehicleWheels[0].ManufacturerName, this.VehicleWheels[0].MaximumAirPressure, 
+this.VehicleWheels[0].CurrentAirPressure, m_CarDetails.Color, m_CarDetails.NumberOfDoors);
         }
     }
 }

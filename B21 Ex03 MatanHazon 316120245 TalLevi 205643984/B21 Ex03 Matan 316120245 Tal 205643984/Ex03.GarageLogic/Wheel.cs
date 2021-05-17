@@ -53,10 +53,12 @@
             {
                 throw new FormatException("Input must be a positive integer");
             }
-            if (m_MaximumAirPressure < i_HowMuchAirToAdd + m_CurrentAirPressure)
+
+            if(m_MaximumAirPressure < i_HowMuchAirToAdd + m_CurrentAirPressure)
             {
                 throw new ValueOutOfRangeException("Too much air in the wheel", 0, m_MaximumAirPressure);
             }
+
             CurrentAirPressure += i_HowMuchAirToAdd;
         }
 

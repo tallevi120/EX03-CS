@@ -30,9 +30,10 @@
                 m_MaximumBatteryTime = value;
             }
         }
+
         public void BatteryCharging(float i_AmountOfChargingHours)
         {
-            if (m_MaximumBatteryTime < i_AmountOfChargingHours + m_RemainingBatteryTime)
+            if(m_MaximumBatteryTime < i_AmountOfChargingHours + m_RemainingBatteryTime)
             {
                 throw new ValueOutOfRangeException("Too much hours in the electric vehicle", 0, m_MaximumBatteryTime);
             }
